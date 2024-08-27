@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kesayangan Mas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cover depan -->
+        <div class="cover" id="cover">
+            <h1>Selamat Anniversary Sayangku</h1>
+            <button onclick="startAnimation()">Mulai</button>
+        </div>
+
+        <!-- Animasi love terbang -->
+        <div class="love-container" id="loveContainer"></div>
+
+        <!-- Buku dan kontrol -->
+        <div class="book-and-controls" id="bookAndControls" style="display: none;">
+            <div class="book">
+                <!-- Halaman 1 sampai 15 dengan foto dimulai dari halaman 1 -->
+                <div class="page" id="page1"><img src="foto1.jpg" alt="Foto 1"></div>
+                <div class="page" id="page2"><img src="foto2.jpg" alt="Foto 2"></div>
+                <div class="page" id="page3"><img src="foto3.jpg" alt="Foto 3"></div>
+                <div class="page" id="page4"><img src="foto4.jpg" alt="Foto 4"></div>
+                <div class="page" id="page5"><img src="foto5.jpg" alt="Foto 5"></div>
+                <div class="page" id="page6"><img src="foto6.jpg" alt="Foto 6"></div>
+                <div class="page" id="page7"><img src="foto7.jpg" alt="Foto 7"></div>
+                <div class="page" id="page8"><img src="foto8.jpg" alt="Foto 8"></div>
+                <div class="page" id="page9"><img src="foto9.jpg" alt="Foto 9"></div>
+                <div class="page" id="page10"><img src="foto10.jpg" alt="Foto 10"></div>
+                <div class="page" id="page11"><img src="foto11.jpg" alt="Foto 11"></div>
+                <div class="page" id="page12"><img src="foto12.jpg" alt="Foto 12"></div>
+                <div class="page" id="page13"><img src="foto13.jpg" alt="Foto 13"></div>
+                <div class="page" id="page14"><img src="foto14.jpg" alt="Foto 14"></div>
+                <div class="page" id="page15"><img src="foto15.jpg" alt="Foto 15"></div>
+            </div>
+            <div class="controls">
+                <button onclick="startSync()">Mulai</button>
+                <button onclick="pauseMusic()">Jeda</button>
+                <button onclick="resetBook()">Mulai Ulang</button>
+            </div>
+        </div>
+    </div>
+    <audio id="backgroundMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>

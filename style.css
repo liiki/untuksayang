@@ -1,0 +1,170 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3f2fd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+/* Cover depan */
+.cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffebee;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cover h1 {
+    font-size: 2.5rem;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.cover button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #d32f2f;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cover button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.6);
+}
+
+/* Animasi love */
+.love-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.love {
+    position: absolute;
+    bottom: 0;
+    font-size: 2rem;
+    color: #e91e63;
+    animation: fly 3s ease-in-out infinite;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(2);
+        opacity: 0;
+    }
+}
+
+/* Buku dan kontrol */
+.book-and-controls {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.book {
+    width: 550px;
+    height: 700px;
+    position: relative;
+    perspective: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #f0f0f0, #d4d4d4);
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    transform-origin: left;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: none; /* Semua halaman tersembunyi secara default */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    z-index: 0;
+}
+
+.page.active {
+    display: flex; /* Tampilkan hanya halaman yang aktif */
+}
+
+.page.flipped {
+    transform: rotateY(-180deg);
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.page img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.controls button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #ff5722;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.controls button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 87, 34, 0.6);
+}
